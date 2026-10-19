@@ -15,7 +15,9 @@ TEST_MONTHS = 3
 def time_based_split(df: pd.DataFrame):
     periods = sorted(df["period"].unique())
     test_periods = periods[-TEST_MONTHS:]
-    train = df[~df["period"].isin(test_periods)]
+    # TimeSeriesSplit corta por posición de fila: el orden debe ser cronológico
+    # para que cada fold valide con meses posteriores y no con otras regiones.
+    train = df[~df["period"].isin(test_periods)].sort_values("period", kind="stable")
     test = df[df["period"].isin(test_periods)]
     return train, test
 

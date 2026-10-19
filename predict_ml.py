@@ -11,9 +11,9 @@ DISCONTINUED_ZERO_MONTHS = 3
 # Mejores hiperparámetros encontrados por RandomizedSearchCV en train_model.py
 BEST_RF_PARAMS = dict(
     n_estimators=100,
-    min_samples_leaf=1,
-    max_features=1.0,
-    max_depth=8,
+    min_samples_leaf=4,
+    max_features=0.5,
+    max_depth=5,
     random_state=42,
 )
 
