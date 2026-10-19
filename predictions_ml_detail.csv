@@ -1,0 +1,41 @@
+region,product,predicted_target
+Caracas,Belmont 10,3515300.0
+Caracas,Belmont 20,17806500.0
+Caracas,Consul,70460800.0
+Caracas,Lucky Strike Cosmic,1245900.0
+Caracas,Lucky Strike Eclipse,0.0
+Caracas,Lucky Strike Nova,10677700.0
+Caracas,Lucky Strike Red,2291300.0
+Caracas,Pall Mall,0.0
+Caracas,Universal,32971300.0
+Caracas,Viceroy,2315300.0
+Centro,Belmont 10,2903000.0
+Centro,Belmont 20,16028700.0
+Centro,Consul,77331500.0
+Centro,Lucky Strike Cosmic,1236300.0
+Centro,Lucky Strike Eclipse,0.0
+Centro,Lucky Strike Nova,10054900.0
+Centro,Lucky Strike Red,1458100.0
+Centro,Pall Mall,0.0
+Centro,Universal,2323200.0
+Centro,Viceroy,17857300.0
+Occidente,Belmont 10,1160900.0
+Occidente,Belmont 20,6225000.0
+Occidente,Consul,66068400.0
+Occidente,Lucky Strike Cosmic,732300.0
+Occidente,Lucky Strike Eclipse,9642700.0
+Occidente,Lucky Strike Nova,2396700.0
+Occidente,Lucky Strike Red,408500.0
+Occidente,Pall Mall,0.0
+Occidente,Universal,16896900.0
+Occidente,Viceroy,129600.0
+Oriente,Belmont 10,2431800.0
+Oriente,Belmont 20,24899400.0
+Oriente,Consul,73246000.0
+Oriente,Lucky Strike Cosmic,1045900.0
+Oriente,Lucky Strike Eclipse,0.0
+Oriente,Lucky Strike Nova,10605600.0
+Oriente,Lucky Strike Red,1415700.0
+Oriente,Pall Mall,0.0
+Oriente,Universal,7891900.0
+Oriente,Viceroy,434800.0

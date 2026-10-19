@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Objetivos de venta - Predicción ML</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --border: #334155;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-strong: #0ea5e9;
+    --good: #34d399;
+    --total-bg: #0c4a6e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px;
+  }
+  h1 {
+    font-size: 1.4rem;
+    margin: 0 0 4px;
+  }
+  .subtitle {
+    color: var(--muted);
+    margin: 0 0 20px;
+    font-size: 0.9rem;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  button {
+    background: var(--accent-strong);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  button:hover { background: var(--accent); }
+  button:disabled { opacity: 0.6; cursor: not-allowed; }
+  #status { color: var(--muted); font-size: 0.9rem; }
+  #status.error { color: #f87171; }
+  #period-badge {
+    display: none;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--panel);
+    display: none;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.88rem;
+    min-width: 700px;
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: right;
+    white-space: nowrap;
+  }
+  th:first-child, td:first-child {
+    text-align: left;
+    position: sticky;
+    left: 0;
+    background: var(--panel);
+  }
+  thead th {
+    border-bottom: 2px solid var(--border);
+    color: var(--muted);
+    font-weight: 600;
+  }
+  tbody tr:not(:last-child) {
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr:hover td { background: #24354d; }
+  tbody tr:hover td:first-child { background: #24354d; }
+  tr.total td {
+    font-weight: 700;
+    background: var(--total-bg);
+    color: white;
+  }
+  tr.total td:first-child { background: var(--total-bg); }
+  td.zero { color: var(--muted); }
+  .empty-state {
+    color: var(--muted);
+    padding: 40px;
+    text-align: center;
+    display: none;
+  }
+  .skipped {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: #fbbf24;
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <h1>Objetivos de venta — Predicción del próximo mes</h1>
+  <p class="subtitle">Modelo Random Forest entrenado sobre el histórico de ventas por región y producto.</p>
+
+  <div class="toolbar">
+    <button id="run-btn">Generar predicción</button>
+    <span id="period-badge"></span>
+    <span id="status"></span>
+  </div>
+
+  <div class="empty-state" id="empty-state">Presiona "Generar predicción" para correr el modelo.</div>
+
+  <div class="table-wrap" id="table-wrap">
+    <table id="result-table">
+      <thead><tr id="table-head"></tr></thead>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+
+  <div class="skipped" id="skipped"></div>
+
+<script>
+const API_URL = "http://127.0.0.1:8000/objetivos/generar";
+
+const runBtn = document.getElementById("run-btn");
+const statusEl = document.getElementById("status");
+const periodBadge = document.getElementById("period-badge");
+const tableWrap = document.getElementById("table-wrap");
+const tableHead = document.getElementById("table-head");
+const tableBody = document.getElementById("table-body");
+const emptyState = document.getElementById("empty-state");
+const skippedEl = document.getElementById("skipped");
+
+emptyState.style.display = "block";
+
+function fmt(n) {
+  return new Intl.NumberFormat("es-VE", { maximumFractionDigits: 0 }).format(n);
+}
+
+function buildPivot(objetivos) {
+  const regions = [...new Set(objetivos.map(o => o.region))].sort();
+  const products = [...new Set(objetivos.map(o => o.product))].sort();
+  const grid = {};
+  products.forEach(p => {
+    grid[p] = {};
+    regions.forEach(r => grid[p][r] = 0);
+  });
+  objetivos.forEach(o => { grid[o.product][o.region] = o.predicted_target; });
+  return { regions, products, grid };
+}
+
+function render(data) {
+  const { objetivos } = data;
+  const { regions, products, grid } = buildPivot(objetivos);
+
+  tableHead.innerHTML = "<th>Producto</th>" +
+    regions.map(r => `<th>${r}</th>`).join("") +
+    "<th>SOP</th>";
+
+  let bodyHtml = "";
+  const regionTotals = Object.fromEntries(regions.map(r => [r, 0]));
+  let grandTotal = 0;
+
+  products.forEach(p => {
+    let rowTotal = 0;
+    let cells = "";
+    regions.forEach(r => {
+      const val = grid[p][r];
+      rowTotal += val;
+      regionTotals[r] += val;
+      cells += `<td class="${val === 0 ? "zero" : ""}">${fmt(val)}</td>`;
+    });
+    grandTotal += rowTotal;
+    bodyHtml += `<tr><td>${p}</td>${cells}<td>${fmt(rowTotal)}</td></tr>`;
+  });
+
+  bodyHtml += `<tr class="total"><td>Total</td>${
+    regions.map(r => `<td>${fmt(regionTotals[r])}</td>`).join("")
+  }<td>${fmt(grandTotal)}</td></tr>`;
+
+  tableBody.innerHTML = bodyHtml;
+  tableWrap.style.display = "block";
+  emptyState.style.display = "none";
+
+  periodBadge.textContent = `Período: ${data.period}`;
+  periodBadge.style.display = "inline-block";
+
+  if (data.omitidos && data.omitidos.length > 0) {
+    skippedEl.style.display = "block";
+    skippedEl.textContent = `⚠ Sin historial suficiente, omitidos: ${
+      data.omitidos.map(o => `${o.region} / ${o.product}`).join(", ")
+    }`;
+  } else {
+    skippedEl.style.display = "none";
+  }
+}
+
+async function runModel() {
+  runBtn.disabled = true;
+  statusEl.classList.remove("error");
+  statusEl.textContent = "Entrenando modelo y generando predicción...";
+
+  try {
+    const res = await fetch(API_URL, { method: "POST" });
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}));
+      throw new Error(body.detail || `Error HTTP ${res.status}`);
+    }
+    const data = await res.json();
+    render(data);
+    statusEl.textContent = `Listo — ${new Date().toLocaleTimeString()}`;
+  } catch (err) {
+    statusEl.classList.add("error");
+    statusEl.textContent = `Error: ${err.message}. ¿Está corriendo la API en ${API_URL}?`;
+  } finally {
+    runBtn.disabled = false;
+  }
+}
+
+runBtn.addEventListener("click", runModel);
+</script>
+</body>
+</html>

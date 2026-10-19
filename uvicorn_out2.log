@@ -1,0 +1,41 @@
+INFO:     127.0.0.1:54198 - "GET /health HTTP/1.1" 200 OK
+Regla de negocio aplicada (forzado a 0 por venta detenida):
+   region              product
+  Caracas Lucky Strike Eclipse
+  Caracas            Pall Mall
+   Centro Lucky Strike Eclipse
+   Centro            Pall Mall
+Occidente            Pall Mall
+  Oriente Lucky Strike Eclipse
+  Oriente            Pall Mall
+INFO:     127.0.0.1:64127 - "POST /objetivos/generar HTTP/1.1" 200 OK
+Regla de negocio aplicada (forzado a 0 por venta detenida):
+   region              product
+  Caracas Lucky Strike Eclipse
+  Caracas            Pall Mall
+   Centro Lucky Strike Eclipse
+   Centro            Pall Mall
+Occidente            Pall Mall
+  Oriente Lucky Strike Eclipse
+  Oriente            Pall Mall
+INFO:     127.0.0.1:51584 - "POST /objetivos/generar HTTP/1.1" 200 OK
+Regla de negocio aplicada (forzado a 0 por venta detenida):
+   region              product
+  Caracas Lucky Strike Eclipse
+  Caracas            Pall Mall
+   Centro Lucky Strike Eclipse
+   Centro            Pall Mall
+Occidente            Pall Mall
+  Oriente Lucky Strike Eclipse
+  Oriente            Pall Mall
+INFO:     127.0.0.1:54183 - "POST /objetivos/generar HTTP/1.1" 200 OK
+Regla de negocio aplicada (forzado a 0 por venta detenida):
+   region              product
+  Caracas Lucky Strike Eclipse
+  Caracas            Pall Mall
+   Centro Lucky Strike Eclipse
+   Centro            Pall Mall
+Occidente            Pall Mall
+  Oriente Lucky Strike Eclipse
+  Oriente            Pall Mall
+INFO:     127.0.0.1:58219 - "POST /objetivos/generar HTTP/1.1" 200 OK

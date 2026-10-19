@@ -1,0 +1,121 @@
+region,product,period,actual,predicted,error,abs_pct_error,method
+Caracas,Belmont 10,2026-06-01,3900000.0,4124684.0,224684.0,5.761136229651705,holt_winters_seasonal
+Caracas,Belmont 10,2026-07-01,3700000.0,3347744.0,-352256.0,9.520434747066298,holt_winters_seasonal
+Caracas,Belmont 10,2026-08-01,3600000.0,3158344.0,-441656.0,12.268233943525779,holt_winters_seasonal
+Caracas,Belmont 20,2026-06-01,19700000.0,17114357.0,-2585643.0,13.12509230293275,holt_winters_seasonal
+Caracas,Belmont 20,2026-07-01,19600000.0,16646338.0,-2953662.0,15.069701836869434,holt_winters_seasonal
+Caracas,Belmont 20,2026-08-01,19000000.0,16461446.0,-2538554.0,13.360808880897531,holt_winters_seasonal
+Caracas,Consul,2026-06-01,58300000.0,54498339.0,-3801661.0,6.52085986377603,holt_winters_seasonal
+Caracas,Consul,2026-07-01,67100000.0,53281892.0,-13818108.0,20.59330497707541,holt_winters_seasonal
+Caracas,Consul,2026-08-01,63100000.0,59307611.0,-3792389.0,6.010124529542216,holt_winters_seasonal
+Caracas,Lucky Strike Cosmic,2026-06-01,900000.0,682777.0,-217223.0,24.13588583189447,holt_trend_no_seasonal
+Caracas,Lucky Strike Cosmic,2026-07-01,1200000.0,657462.0,-542538.0,45.21152693152795,holt_trend_no_seasonal
+Caracas,Lucky Strike Cosmic,2026-08-01,1200000.0,634942.0,-565058.0,47.08817656230352,holt_trend_no_seasonal
+Caracas,Lucky Strike Eclipse,2026-06-01,0.0,0.0,0.0,0.0,discontinued
+Caracas,Lucky Strike Eclipse,2026-07-01,0.0,0.0,0.0,0.0,discontinued
+Caracas,Lucky Strike Eclipse,2026-08-01,0.0,0.0,0.0,0.0,discontinued
+Caracas,Lucky Strike Nova,2026-06-01,10800000.0,10039604.0,-760396.0,7.040704115286797,holt_winters_seasonal
+Caracas,Lucky Strike Nova,2026-07-01,10600000.0,10627682.0,27682.0,0.2611526698307398,holt_winters_seasonal
+Caracas,Lucky Strike Nova,2026-08-01,10600000.0,11453914.0,853914.0,8.055791909940366,holt_winters_seasonal
+Caracas,Lucky Strike Red,2026-06-01,2400000.0,3013986.0,613986.0,25.58275901392471,holt_winters_seasonal
+Caracas,Lucky Strike Red,2026-07-01,2300000.0,2645051.0,345051.0,15.002232778459627,holt_winters_seasonal
+Caracas,Lucky Strike Red,2026-08-01,2300000.0,2506293.0,206293.0,8.969271252981894,holt_winters_seasonal
+Caracas,Pall Mall,2026-06-01,0.0,5799882.0,5799882.0,,holt_winters_seasonal
+Caracas,Pall Mall,2026-07-01,0.0,4479419.0,4479419.0,,holt_winters_seasonal
+Caracas,Pall Mall,2026-08-01,0.0,4272655.0,4272655.0,,holt_winters_seasonal
+Caracas,Universal,2026-06-01,32000000.0,28860344.0,-3139656.0,9.811423659659003,holt_winters_seasonal
+Caracas,Universal,2026-07-01,32700000.0,24408200.0,-8291800.0,25.357185949548683,holt_winters_seasonal
+Caracas,Universal,2026-08-01,33000000.0,25718346.0,-7281654.0,22.065616759407565,holt_winters_seasonal
+Caracas,Viceroy,2026-06-01,2400000.0,1420866.0,-979134.0,40.797267668958206,holt_winters_seasonal
+Caracas,Viceroy,2026-07-01,2100000.0,1125398.0,-974602.0,46.40961151146817,holt_winters_seasonal
+Caracas,Viceroy,2026-08-01,2100000.0,765426.0,-1334574.0,63.55112369407778,holt_winters_seasonal
+Centro,Belmont 10,2026-06-01,3300000.0,3068134.0,-231866.0,7.026240218648152,holt_winters_seasonal
+Centro,Belmont 10,2026-07-01,3100000.0,2652534.0,-447466.0,14.43439986418524,holt_winters_seasonal
+Centro,Belmont 10,2026-08-01,3000000.0,1892432.0,-1107568.0,36.91892244661566,holt_winters_seasonal
+Centro,Belmont 20,2026-06-01,15100000.0,10078823.0,-5021177.0,33.252827311866604,holt_winters_seasonal
+Centro,Belmont 20,2026-07-01,16200000.0,10357823.0,-5842177.0,36.062819136327434,holt_winters_seasonal
+Centro,Belmont 20,2026-08-01,15700000.0,10677954.0,-5022046.0,31.987554978408834,holt_winters_seasonal
+Centro,Consul,2026-06-01,71000000.0,70520613.0,-479387.0,0.6751936101483627,holt_winters_seasonal
+Centro,Consul,2026-07-01,72700000.0,62875393.0,-9824607.0,13.513901830470873,holt_winters_seasonal
+Centro,Consul,2026-08-01,71400000.0,63713284.0,-7686716.0,10.765708220478826,holt_winters_seasonal
+Centro,Lucky Strike Cosmic,2026-06-01,900000.0,686291.0,-213709.0,23.745445658908096,holt_trend_no_seasonal
+Centro,Lucky Strike Cosmic,2026-07-01,1200000.0,655533.0,-544467.0,45.37223838081045,holt_trend_no_seasonal
+Centro,Lucky Strike Cosmic,2026-08-01,1200000.0,628123.0,-571877.0,47.65638548496517,holt_trend_no_seasonal
+Centro,Lucky Strike Eclipse,2026-06-01,0.0,0.0,0.0,0.0,discontinued
+Centro,Lucky Strike Eclipse,2026-07-01,0.0,0.0,0.0,0.0,discontinued
+Centro,Lucky Strike Eclipse,2026-08-01,0.0,0.0,0.0,0.0,discontinued
+Centro,Lucky Strike Nova,2026-06-01,11500000.0,10387628.0,-1112372.0,9.672803971684353,holt_winters_seasonal
+Centro,Lucky Strike Nova,2026-07-01,10600000.0,11351809.0,751809.0,7.092540198280757,holt_winters_seasonal
+Centro,Lucky Strike Nova,2026-08-01,10600000.0,11795720.0,1195720.0,11.28038164510571,holt_winters_seasonal
+Centro,Lucky Strike Red,2026-06-01,1600000.0,1789201.0,189201.0,11.825090126209965,holt_winters_seasonal
+Centro,Lucky Strike Red,2026-07-01,1600000.0,1764417.0,164417.0,10.27608359881224,holt_winters_seasonal
+Centro,Lucky Strike Red,2026-08-01,1600000.0,1754256.0,154256.0,9.64097833601419,holt_winters_seasonal
+Centro,Pall Mall,2026-06-01,0.0,2921909.0,2921909.0,,holt_winters_seasonal
+Centro,Pall Mall,2026-07-01,0.0,1786844.0,1786844.0,,holt_winters_seasonal
+Centro,Pall Mall,2026-08-01,0.0,2044605.0,2044605.0,,holt_winters_seasonal
+Centro,Universal,2026-06-01,2500000.0,1709824.0,-790176.0,31.60704892664231,holt_winters_seasonal
+Centro,Universal,2026-07-01,2100000.0,2111102.0,11102.0,0.528677420430218,holt_winters_seasonal
+Centro,Universal,2026-08-01,2200000.0,323593.0,-1876407.0,85.2912064205778,holt_winters_seasonal
+Centro,Viceroy,2026-06-01,20500000.0,16706671.0,-3793329.0,18.504042095382893,holt_winters_seasonal
+Centro,Viceroy,2026-07-01,18300000.0,13036503.0,-5263497.0,28.762278859061553,holt_winters_seasonal
+Centro,Viceroy,2026-08-01,18300000.0,14345617.0,-3954383.0,21.60864914161261,holt_winters_seasonal
+Occidente,Belmont 10,2026-06-01,1100000.0,1379186.0,279186.0,25.380580941279735,holt_winters_seasonal
+Occidente,Belmont 10,2026-07-01,1000000.0,1102919.0,102919.0,10.29189789098259,holt_winters_seasonal
+Occidente,Belmont 10,2026-08-01,1000000.0,824827.0,-175173.0,17.517282463973643,holt_winters_seasonal
+Occidente,Belmont 20,2026-06-01,5900000.0,5949432.0,49432.0,0.837833025665859,holt_winters_seasonal
+Occidente,Belmont 20,2026-07-01,6100000.0,5504026.0,-595974.0,9.77005799241851,holt_winters_seasonal
+Occidente,Belmont 20,2026-08-01,5900000.0,5278467.0,-621533.0,10.53446043655783,holt_winters_seasonal
+Occidente,Consul,2026-06-01,50700000.0,39353071.0,-11346929.0,22.38052969726889,holt_winters_seasonal
+Occidente,Consul,2026-07-01,55900000.0,39505100.0,-16394900.0,29.328980297575136,holt_winters_seasonal
+Occidente,Consul,2026-08-01,57600000.0,35295689.0,-22304311.0,38.722761879992724,holt_winters_seasonal
+Occidente,Lucky Strike Cosmic,2026-06-01,500000.0,374293.0,-125707.0,25.141351388877304,holt_trend_no_seasonal
+Occidente,Lucky Strike Cosmic,2026-07-01,700000.0,351834.0,-348166.0,49.73803173798212,holt_trend_no_seasonal
+Occidente,Lucky Strike Cosmic,2026-08-01,700000.0,333602.0,-366398.0,52.34254297147394,holt_trend_no_seasonal
+Occidente,Lucky Strike Eclipse,2026-06-01,13800000.0,14515030.0,715030.0,5.181378737340668,holt_winters_seasonal
+Occidente,Lucky Strike Eclipse,2026-07-01,8200000.0,14170984.0,5970984.0,72.81687955304417,holt_winters_seasonal
+Occidente,Lucky Strike Eclipse,2026-08-01,8500000.0,14866981.0,6366981.0,74.90566011898623,holt_winters_seasonal
+Occidente,Lucky Strike Nova,2026-06-01,2500000.0,1952197.0,-547803.0,21.912138039832943,holt_winters_seasonal
+Occidente,Lucky Strike Nova,2026-07-01,2400000.0,794321.0,-1605679.0,66.9032961363641,holt_winters_seasonal
+Occidente,Lucky Strike Nova,2026-08-01,2400000.0,602859.0,-1797141.0,74.88086996723007,holt_winters_seasonal
+Occidente,Lucky Strike Red,2026-06-01,400000.0,673359.0,273359.0,68.3397487808009,holt_winters_seasonal
+Occidente,Lucky Strike Red,2026-07-01,400000.0,425303.0,25303.0,6.32573522511046,holt_winters_seasonal
+Occidente,Lucky Strike Red,2026-08-01,400000.0,424780.0,24780.0,6.194885168820154,holt_winters_seasonal
+Occidente,Pall Mall,2026-06-01,0.0,1254506.0,1254506.0,,holt_winters_seasonal
+Occidente,Pall Mall,2026-07-01,0.0,573026.0,573026.0,,holt_winters_seasonal
+Occidente,Pall Mall,2026-08-01,0.0,642545.0,642545.0,,holt_winters_seasonal
+Occidente,Universal,2026-06-01,19500000.0,12156563.0,-7343437.0,37.65865040445893,holt_winters_seasonal
+Occidente,Universal,2026-07-01,12300000.0,9320289.0,-2979711.0,24.22529261235696,holt_winters_seasonal
+Occidente,Universal,2026-08-01,12500000.0,8360446.0,-4139554.0,33.11643238942402,holt_winters_seasonal
+Occidente,Viceroy,2026-06-01,100000.0,965566.0,865566.0,865.565801809833,holt_winters_seasonal
+Occidente,Viceroy,2026-07-01,100000.0,134187.0,34187.0,34.18659658894889,holt_winters_seasonal
+Occidente,Viceroy,2026-08-01,100000.0,106234.0,6234.0,6.234082477841483,holt_winters_seasonal
+Oriente,Belmont 10,2026-06-01,2700000.0,2310266.0,-389734.0,14.43457559464589,holt_winters_seasonal
+Oriente,Belmont 10,2026-07-01,2600000.0,2229281.0,-370719.0,14.258412330025072,holt_winters_seasonal
+Oriente,Belmont 10,2026-08-01,2500000.0,2034329.0,-465671.0,18.62682862124352,holt_winters_seasonal
+Oriente,Belmont 20,2026-06-01,24900000.0,22507370.0,-2392630.0,9.608956305399897,holt_winters_seasonal
+Oriente,Belmont 20,2026-07-01,25700000.0,22097124.0,-3602876.0,14.018973724019768,holt_winters_seasonal
+Oriente,Belmont 20,2026-08-01,24900000.0,22777789.0,-2122211.0,8.522937044118633,holt_winters_seasonal
+Oriente,Consul,2026-06-01,73500000.0,80538965.0,7038965.0,9.576823266642192,holt_winters_seasonal
+Oriente,Consul,2026-07-01,83800000.0,65544567.0,-18255433.0,21.784526693648516,holt_winters_seasonal
+Oriente,Consul,2026-08-01,82400000.0,69807555.0,-12592445.0,15.282093041260916,holt_winters_seasonal
+Oriente,Lucky Strike Cosmic,2026-06-01,700000.0,477913.0,-222087.0,31.726737240161157,holt_trend_no_seasonal
+Oriente,Lucky Strike Cosmic,2026-07-01,900000.0,454895.0,-445105.0,49.45608779181183,holt_trend_no_seasonal
+Oriente,Lucky Strike Cosmic,2026-08-01,900000.0,434398.0,-465602.0,51.733529445274876,holt_trend_no_seasonal
+Oriente,Lucky Strike Eclipse,2026-06-01,0.0,0.0,0.0,0.0,discontinued
+Oriente,Lucky Strike Eclipse,2026-07-01,0.0,0.0,0.0,0.0,discontinued
+Oriente,Lucky Strike Eclipse,2026-08-01,0.0,0.0,0.0,0.0,discontinued
+Oriente,Lucky Strike Nova,2026-06-01,11200000.0,9964739.0,-1235261.0,11.029115774110391,holt_winters_seasonal
+Oriente,Lucky Strike Nova,2026-07-01,10600000.0,11229024.0,629024.0,5.934191726517336,holt_winters_seasonal
+Oriente,Lucky Strike Nova,2026-08-01,10600000.0,11872381.0,1272381.0,12.003592816326329,holt_winters_seasonal
+Oriente,Lucky Strike Red,2026-06-01,1400000.0,1082492.0,-317508.0,22.679139479209653,holt_winters_seasonal
+Oriente,Lucky Strike Red,2026-07-01,1400000.0,1256001.0,-143999.0,10.285638615614019,holt_winters_seasonal
+Oriente,Lucky Strike Red,2026-08-01,1400000.0,1204761.0,-195239.0,13.945622895650898,holt_winters_seasonal
+Oriente,Pall Mall,2026-06-01,0.0,0.0,0.0,0.0,discontinued
+Oriente,Pall Mall,2026-07-01,0.0,0.0,0.0,0.0,discontinued
+Oriente,Pall Mall,2026-08-01,0.0,0.0,0.0,0.0,discontinued
+Oriente,Universal,2026-06-01,8800000.0,0.0,-8800000.0,100.0,holt_winters_seasonal
+Oriente,Universal,2026-07-01,6400000.0,3232375.0,-3167625.0,49.49413827082199,holt_winters_seasonal
+Oriente,Universal,2026-08-01,6500000.0,6359139.0,-140861.0,2.167096495907954,holt_winters_seasonal
+Oriente,Viceroy,2026-06-01,500000.0,629373.0,129373.0,25.874663154800746,holt_winters_seasonal
+Oriente,Viceroy,2026-07-01,400000.0,247231.0,-152769.0,38.19215118144727,holt_winters_seasonal
+Oriente,Viceroy,2026-08-01,400000.0,254614.0,-145386.0,36.346570372854195,holt_winters_seasonal

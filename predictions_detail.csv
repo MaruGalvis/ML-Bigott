@@ -1,0 +1,41 @@
+region,product,predicted_target,method
+Caracas,Belmont 10,3468700.0,holt_winters_seasonal
+Caracas,Belmont 20,18160100.0,holt_winters_seasonal
+Caracas,Consul,70198400.0,holt_winters_seasonal
+Caracas,Lucky Strike Cosmic,818600.0,holt_trend_no_seasonal
+Caracas,Lucky Strike Eclipse,0.0,discontinued
+Caracas,Lucky Strike Nova,10589400.0,holt_winters_seasonal
+Caracas,Lucky Strike Red,2371800.0,holt_winters_seasonal
+Caracas,Pall Mall,0.0,discontinued
+Caracas,Universal,32850200.0,holt_winters_seasonal
+Caracas,Viceroy,2467300.0,holt_winters_seasonal
+Centro,Belmont 10,3141400.0,holt_winters_seasonal
+Centro,Belmont 20,15991500.0,holt_winters_seasonal
+Centro,Consul,80442400.0,holt_winters_seasonal
+Centro,Lucky Strike Cosmic,823500.0,holt_trend_no_seasonal
+Centro,Lucky Strike Eclipse,0.0,discontinued
+Centro,Lucky Strike Nova,11134500.0,holt_winters_seasonal
+Centro,Lucky Strike Red,1868500.0,holt_winters_seasonal
+Centro,Pall Mall,0.0,discontinued
+Centro,Universal,2364500.0,holt_winters_seasonal
+Centro,Viceroy,17386200.0,holt_winters_seasonal
+Occidente,Belmont 10,853600.0,holt_winters_seasonal
+Occidente,Belmont 20,5179300.0,holt_winters_seasonal
+Occidente,Consul,49657000.0,holt_winters_seasonal
+Occidente,Lucky Strike Cosmic,503000.0,holt_trend_no_seasonal
+Occidente,Lucky Strike Eclipse,8627900.0,holt_winters_seasonal
+Occidente,Lucky Strike Nova,2019000.0,holt_winters_seasonal
+Occidente,Lucky Strike Red,325500.0,holt_winters_seasonal
+Occidente,Pall Mall,0.0,discontinued
+Occidente,Universal,16915800.0,holt_winters_seasonal
+Occidente,Viceroy,0.0,holt_winters_seasonal
+Oriente,Belmont 10,2364000.0,holt_winters_seasonal
+Oriente,Belmont 20,24275200.0,holt_winters_seasonal
+Oriente,Consul,85583700.0,holt_winters_seasonal
+Oriente,Lucky Strike Cosmic,591700.0,holt_trend_no_seasonal
+Oriente,Lucky Strike Eclipse,0.0,discontinued
+Oriente,Lucky Strike Nova,11255200.0,holt_winters_seasonal
+Oriente,Lucky Strike Red,1276900.0,holt_winters_seasonal
+Oriente,Pall Mall,0.0,discontinued
+Oriente,Universal,5679500.0,holt_winters_seasonal
+Oriente,Viceroy,436100.0,holt_winters_seasonal
